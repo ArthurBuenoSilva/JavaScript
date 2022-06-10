@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Your custom script here -->
+    <script type="text/babel">
+
+        /*
+        //Função padrão
+        let quadrado = function(x = 2){
+            return x * x
+        }
+        */
+
+        /*
+        //variável - parâmetro - retorno explícito
+        let quadrado = (x) => {
+            return x * x 
+        }
+        */
+
+        //variável - parâmetro - retorno implícito
+        let quadrado = x => x * x
+
+        document.write(quadrado(3) +  '<br>')
+
+        /*
+        //Função Padrão
+        let parImpar = function(numero){
+            if(numero % 2 == 0){
+                return 'par'
+            }else{
+                return 'impar'
+            }
+        }
+        */
+
+        //Arrow Function
+        let parImpar = numero => numero % 2 == 0 ? 'par' : 'ímpar'
+
+        document.write(parImpar(2))
+    
+    </script>
+
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Your custom script here -->
+    <script type="text/babel">
+        
+        //String
+        let tituloArtigo = 'Como utilizar o operador spread'
+
+        console.log(tituloArtigo)
+        console.log([...tituloArtigo])
+
+        //Arrays
+        let listaCursos1 = ['Node Js', 'ES6', 'Angular']
+        let listaCursos2 = ['Android', 'IOS', 'GNU']
+        let listaCursosCompletos = ['WebCompleto', 'Android Completo', ...listaCursos1, ...listaCursos2]
+
+        console.log(listaCursosCompletos)
+
+        //Objetos
+        let pessoa = {nome: 'João', idade: 27}
+        let clone = {endereco: 'Rua 123', ...pessoa}
+
+        console.log(clone)
+        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

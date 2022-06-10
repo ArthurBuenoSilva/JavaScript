@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Your custom script here -->
+    <script type="text/babel">
+        
+        //Array
+        let array = [10, 20, 30, 40]
+
+        function teste([a, b, , c, d = 50]){
+            console.log(a, b, c, d)
+        }
+
+        teste(array)
+
+        //Objeto
+        let obj = {
+            a: 10,
+            b: 20,
+            c: 30,
+            d: 40,
+        }
+
+        function teste2({a, b, c, d = 50}){
+            console.log(a, b, c, d)
+        }
+
+        teste2(obj)
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstração</title>
+
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Your custom script here -->
+    <script type="text/babel">
+        
+        //Software para marcenaria
+
+        class Cadeira{
+
+            constructor(qtdPernas, giratoria, cor){
+                this.qtdPernas = qtdPernas
+                this.giratoria = giratoria
+                this.cor = cor
+            }
+
+            girarCadeira(){
+                console.log(this.giratoria ? 'A cadeira é giratória' : 'A cadeira não é giratória')
+            }
+        }
+
+        let cadeiras = Array()
+
+        function novaCadeira(){
+
+            let qtdPernas = parseInt(document.getElementById('qtdPernas').value)
+            let giratoria = document.getElementById('giratoria').value
+            let cor = document.getElementById('cor').value
+
+            cadeiras.push(new Cadeira(qtdPernas, giratoria, cor))
+
+            console.log('Cadeira criada com sucesso')
+        }
+
+        function exibirCadeira(){
+
+            let index = document.getElementById('index').value
+
+            console.log(cadeiras[index])
+        }
+
+    </script>
+
+</head>
+<body>
+    <p>Quantidade de pernas: </p>
+    <input type="text" id="qtdPernas">
+
+    <p>Giratória: </p>
+    <input type="radio" name="cadeira" id="giratoria" value="true">
+    <label for="true">Sim</label>
+    <input type="radio" name="cadeira" id="giratoria" value="false">
+    <label for="false">Não</label>
+
+    <p>Cor: </p>
+    <input type="color" name="cor" id="cor" value="#00FF00">
+
+    <br>
+    <br>
+    <input type="button" value="Nova Cadeira" onclick="novaCadeira()">
+
+    <p>Exibir cadeira: </p>
+    <input type="number" id="index" min="0">
+
+    <br>
+    <br>
+    <input type="button" value="Exibir Cadeira" onclick="exibirCadeira()">
+</body>
+</html>

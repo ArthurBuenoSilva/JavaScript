@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Literal</title>
+
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Your custom script here -->
+    <script type="text/babel">
+        
+        class Produto{
+
+            constructor(descricao, preco){
+                this.descricao = descricao
+                this.preco = preco
+            }   
+
+            verDescricao(){
+                console.log(`${this.descricao} por apenas ${this.preco}`)
+            }
+        }
+
+        let produto = new Produto('Notebook', 1500)
+        produto.verDescricao()
+
+        let produtoLiteral = {
+            descricao: 'Notebook',
+            preco: 1500,
+            verDescricao: function(){
+                console.log(`${this.descricao} por apenas ${this.preco}`)
+            }
+        }
+
+        produtoLiteral.verDescricao()
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

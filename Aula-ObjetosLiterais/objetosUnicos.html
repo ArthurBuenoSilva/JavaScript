@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusão Atributos</title>
+
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Your custom script here -->
+    <script type="text/babel">
+
+        let assinatura = {
+            idCliente: 1000,
+            descricao: 'Acesso a internet',
+            status(){
+                console.log('Ativo')
+            }
+        }
+
+        console.log(assinatura.descricao)
+
+        let y = assinatura
+
+        y.descricao = 'Internet + Tv + Telefone'
+
+        console.log(y.descricao)
+        console.log(assinatura.descricao)
+
+        console.log(y.descricao)
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
