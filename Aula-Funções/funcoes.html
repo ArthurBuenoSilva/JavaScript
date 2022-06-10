@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+
+    <script>
+
+        function calcularArea(largura, comprimento) 
+        {
+            var area = largura * comprimento
+            return area
+        }
+
+        document.write(calcularArea(parseInt(prompt('Digite a largura:')), parseInt(prompt('Digite o comprimento:'))))
+
+        function soma(a, b) {
+            a = a === undefined ? 0 : a
+            b = b === undefined ? 0 : b
+            return a + b
+        }
+
+        console.log(soma())             //a e b seriam iguais a undefined
+        console.log(soma(1))            //b seria igual a undefined
+        console.log(soma(1, 2))         
+        console.log(soma(1, 2, 3, 4))   //Função ignora os parametros adicionais
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

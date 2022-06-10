@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else</title>
+
+    <script>
+        //Operadores
+
+        /*
+            Igual           ==
+            Idêntico        ===
+            Diferente       !=
+            Não Idêntico    !==
+            Menor           <
+            Maior           >
+            Menor Igual     <=
+            Maior Igual     >=
+        */
+
+        /*
+            E           &&
+            OU          ||
+            Negação     !
+        */
+
+        var nota = prompt('Digite sua nota:')
+        var faltas = prompt('Digite suas faltas:')
+        var media = 7
+        var faltasMax = 15
+
+        if(nota >= media && faltas <= faltasMax){
+            document.write('Aprovado')
+        }else{
+            document.write('Reprovado')
+        }
+
+        var resultado = (nota >= media && faltas <= faltasMax) ? 'Aprovado' : 'Reprovado'
+        document.write(resultado);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

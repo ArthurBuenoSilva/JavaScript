@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de erros</title>
+
+    <script>
+
+        var video = Array()
+
+        video[1] = Array()
+        video[1]['nome'] = 'Lord of The Rings'
+        video[1]['categoria'] = 'Fiction'
+
+        function getVideo(video) {
+
+            try{
+                console.log(video[0]['nome'])
+            }catch(error){
+                tratarErro(error)
+                throw new Error('Houve um erro mas não se preocupe, estamos trabalhando nisso!!')
+            }finally{
+                console.log('Sempre passa por aqui (try / catch)')
+            }
+        }
+
+        function tratarErro(error) {
+            console.log(error)
+        }
+
+        getVideo(video)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Array</title>
+
+    <script>
+
+        var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+        function add() {
+            var palavra = document.getElementById('palavra').value 
+            if(palavra != ''){
+                if(objetos.indexOf(palavra) == -1){
+                    objetos.push(palavra)
+                    console.log(objetos)
+                    document.getElementById('palavra').value = ''
+                }else{
+                    alert('Objeto já foi adicionado')
+                }
+            }else{
+                alert('Informe um valor válido')
+            }
+        }
+
+        function ordena() {
+            objetos.sort()
+            console.log(objetos)
+        }
+
+    </script>
+
+</head>
+<body>
+    <input id="palavra" type="text" placeholder="Digite uma palavra">
+    <input onclick="add()" type="button" value="Adicionar">
+    <input onclick="ordena()" type="button" value="Ordenar">
+</body>
+</html>

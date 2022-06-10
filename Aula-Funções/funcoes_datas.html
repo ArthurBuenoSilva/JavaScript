@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+
+    <script>
+
+        var data = new Date()
+
+        // Dia - Mês - Ano
+        //document.write(data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear())
+
+        //Adicionar ou remover dias
+        document.write(data.toString())
+        data.setDate(data.getDate() + 152)
+        document.write('<hr/>')
+        document.write(data.toString())
+        document.write('<br/><br/><br/>')
+
+        //Calcular a quantidade de dias entre essas datas
+        var data1 = new Date(2021, 6, 16)
+        var data2 = new Date(2021, 1, 23)
+
+        document.write(data1.toString())
+        document.write('<hr/>')
+        document.write(data2.toString())
+        document.write('<br/><br/><br/>')
+
+        //Pegando o valor em milisegundos 
+        document.write(data1.getTime())
+        document.write('<hr/>')
+        document.write(data2.getTime())
+        document.write('<br/><br/><br/>')
+
+        //Subtraindo os milisegundos
+        document.write(Math.abs(data1.getTime() - data2.getTime()))
+        document.write('<hr/>')
+
+        //Calculando a quantidade de dias
+        /*
+            1 dia = 24h
+            1 hora = 60min
+            1 min = 60seg
+            1 seg = 1000ms
+        */
+       document.write('1 dia é igual a : ' + (1*24*60*60*1000) + 'ms')
+       document.write('<hr/>')
+       document.write('A diferença entre a data1 e data2 é: ' + Math.ceil(Math.abs(data1.getTime() - data2.getTime()) / 86400000) + ' dia(s)')
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

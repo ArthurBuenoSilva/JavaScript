@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing</title>
+
+    <script>
+
+        window.setTimeout(function(){
+            document.write('Your time is over.' + '<br>')
+        }, 6000)
+
+        var time = 5
+
+        var interval = window.setInterval(function(){
+            document.write(time + '<br>')
+            time--
+
+            if(time == 0){
+                clearInterval(interval)
+            }
+        }, 1000)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

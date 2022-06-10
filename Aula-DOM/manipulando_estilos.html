@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Estilos</title>
+
+</head>
+<body>
+
+    <h3>Manipulando estilo</h3>
+
+    <input type="button" value="Vermelho" onclick="cor('#FF0000')">
+    <input type="button" value="Verde" onclick="cor('#00FF00')">
+    <input type="button" value="Azul" onclick="cor('#0000FF')"><br/><br/>
+
+    <div id="div"style="border: 1px solid black; width: 175px; height: 175px;">
+
+    </div>
+    
+</body>
+
+<script>
+
+    function cor(rgb) {
+        document.getElementById('div').style.background = rgb
+    }
+   
+</script>
+
+</html>
